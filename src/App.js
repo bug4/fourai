@@ -13,7 +13,7 @@ const Notification = () => (
     exit={{ opacity: 0, x: -20 }}
     className="fixed top-4 left-4 bg-black text-white px-4 py-2 rounded-lg shadow-lg z-50"
   >
-    Public GitHub repository for Quadra will be available in the next update.
+    Public GitHub repository for Vier will be available in the next update.
   </motion.div>
 );
 
@@ -146,7 +146,7 @@ const MainScreen = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-6xl font-bold mb-6 text-gray-900"
             >
-              Quadra
+              Vier
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -207,7 +207,7 @@ const MainScreen = () => {
       <div className="flex justify-center gap-4 py-6">
         <div 
           className="text-gray-400 hover:text-gray-600 cursor-pointer transition-colors"
-          onClick={() => window.open('https://x.com/Quadradotlol', '_blank')}
+          onClick={() => window.open('https://x.com/VierAgents', '_blank')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
