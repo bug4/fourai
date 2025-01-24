@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.animation-delay-2000 {
-    animation-delay: 2s;
+@layer base {
+  body {
+    @apply bg-[#0A0A0A] text-white;
   }
-  
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gradient-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+}
