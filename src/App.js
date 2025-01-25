@@ -13,7 +13,7 @@ const Notification = () => (
     exit={{ opacity: 0, y: -20 }}
     className="fixed top-4 left-4 glass-card px-4 py-2 rounded-lg z-50"
   >
-    Public GitHub repository for Tetra Flux will be available in the next update.
+    Public GitHub repository for Zeta Core will be available in the next update.
   </motion.div>
 );
 
@@ -140,7 +140,7 @@ const MainScreen = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 text-transparent bg-clip-text"
             >
-              Tetra Flux
+              Zeta Core
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -208,7 +208,7 @@ const MainScreen = () => {
       <div className="flex justify-center gap-4 py-6">
         <div 
           className="text-gray-500 hover:text-emerald-400 cursor-pointer transition-colors"
-          onClick={() => window.open('https://x.com/tetrafluxai', '_blank')}
+          onClick={() => window.open('https://x.com/ZetaCoreAI', '_blank')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>

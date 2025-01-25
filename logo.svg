@@ -1,19 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="256" fill="#0A0A0A"/>
-  <g filter="url(#glow)">
-    <!-- Atlas (Data Cartography) - Emerald -->
-    <path d="M256 128L384 192L256 256L128 192L256 128Z" fill="#10B981" fillOpacity="0.9"/>
-    <!-- Nexus (Integration) - Blue -->
-    <path d="M384 192V320L256 384V256L384 192Z" fill="#3B82F6" fillOpacity="0.9"/>
-    <!-- Prism (Content) - Purple -->
-    <path d="M256 256V384L128 320V192L256 256Z" fill="#8B5CF6" fillOpacity="0.9"/>
-    <!-- Cipher (Security) - Red -->
-    <path d="M256 256L384 320L256 384L128 320L256 256Z" fill="#EF4444" fillOpacity="0.9"/>
-  </g>
-  <defs>
-    <filter id="glow" x="-4" y="-4" width="520" height="520" filterUnits="userSpaceOnUse">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-  </defs>
+  <!-- Background Circle -->
+  <circle
+    cx="256"
+    cy="256"
+    r="240"
+    stroke="#10B981"
+    stroke-width="4"
+    stroke-opacity="0.2"
+  />
+  
+  <!-- Geometric Pattern -->
+  <path
+    d="M256 120L376 188V324L256 392L136 324V188L256 120Z"
+    stroke="#10B981"
+    stroke-width="4"
+    fill="none"
+  />
+
+  <!-- Inner Pattern -->
+  <path
+    d="M256 150L346 201V303L256 354L166 303V201L256 150Z"
+    stroke="#10B981"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- Core Symbol -->
+  <path
+    d="M216 206H296M216 306H296M296 206L216 306"
+    stroke="#10B981"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Connection Points -->
+  <circle cx="256" cy="206" r="4" fill="#10B981" />
+  <circle cx="256" cy="306" r="4" fill="#10B981" />
+  
+  <!-- Subtle Accent Lines -->
+  <line x1="136" y1="256" x2="166" y2="256" stroke="#10B981" stroke-width="2" stroke-opacity="0.5" />
+  <line x1="346" y1="256" x2="376" y2="256" stroke="#10B981" stroke-width="2" stroke-opacity="0.5" />
 </svg>
