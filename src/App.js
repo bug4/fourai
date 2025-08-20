@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Twitter } from 'lucide-react';
 import { Innovator } from './components/Innovator';
 import { Navigator } from './components/Navigator';
 import { Constructor } from './components/Constructor';
@@ -250,8 +251,21 @@ const MainScreen = () => {
           {/* Footer */}
           <div className="mt-12 text-center text-sm text-yellow-500/60">
             <div className="border-t border-yellow-400/20 pt-6">
-              Holy Agents v3.0 • Divine Protocol Active • 
-              <span className="text-yellow-400"> Sacred Connection Established</span>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 border border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400/10 transition-colors text-yellow-300 hover:text-yellow-400 rounded-lg group"
+                >
+                  <Twitter size={18} className="group-hover:scale-110 transition-transform" />
+                  <span>Follow on Twitter</span>
+                </a>
+              </div>
+              <div>
+                Holy Agents v3.0 • Divine Protocol Active • 
+                <span className="text-yellow-400"> Sacred Connection Established</span>
+              </div>
             </div>
           </div>
         </div>
