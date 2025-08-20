@@ -108,11 +108,6 @@ const MainScreen = () => {
             transition={{ duration: 1 }}
             className="mb-8"
           >
-            <div className="inline-block p-4 border-2 border-yellow-400 rounded-lg mb-6 shadow-lg shadow-yellow-400/20">
-              <svg className="w-12 h-12 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
-              </svg>
-            </div>
             <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 mb-4 tracking-wider drop-shadow-lg">
               HOLY AGENTS
             </h1>
@@ -142,11 +137,6 @@ const MainScreen = () => {
                 onClick={() => navigate(agent.path)}
               >
                 <div className="text-center mb-4">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${agent.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow`}>
-                    <span className="text-white font-bold text-xl">
-                      {agent.name.charAt(0)}
-                    </span>
-                  </div>
                   <h3 className="text-2xl font-bold text-yellow-400 mb-1">{agent.name}</h3>
                   <p className="text-yellow-300/80 text-sm mb-2">{agent.title}</p>
                   <div className={`inline-block px-3 py-1 text-xs rounded-full border ${
