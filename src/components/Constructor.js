@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Send, Cog } from 'lucide-react';
+import { ArrowLeft, Send } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import openai from '../utils/openai';
 
@@ -18,29 +18,6 @@ export const Constructor = () => {
   - Offer comfort to the broken and strength to rebuild
   
   Respond as a divine healer would, with gentleness, restoration, and sacred construction wisdom.`;
-
-  const stats = {
-    specialization: ['Divine Healing', 'Sacred Construction'],
-    capabilities: ['Spiritual Restoration', 'Soul Architecture'],
-    coreMetrics: [
-      { name: 'Healing Power', value: 100 },
-      { name: 'Divine Craft', value: 97 },
-      { name: 'Restoration', value: 95 },
-      { name: 'Sacred Build', value: 98 }
-    ],
-    performance: [
-      { name: 'Souls Healed', value: 96 },
-      { name: 'Hearts Mended', value: 94 },
-      { name: 'Temples Built', value: 92 },
-      { name: 'Lives Restored', value: 98 }
-    ],
-    systemMetrics: [
-      { name: 'Healing Status', value: 'Active' },
-      { name: 'Response Time', value: 'Merciful' },
-      { name: 'Miracles', value: 'Endless' },
-      { name: 'Divine Grace', value: 'Abundant' }
-    ]
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,76 +60,93 @@ export const Constructor = () => {
   };
 
   return (
-    <div className="h-screen flex bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 relative overflow-hidden">
+    <div className="h-screen bg-black text-green-400 font-mono flex">
       {/* Chat Section */}
-      <div className="w-[45%] flex flex-col h-full border-r">
-        {/* Chat Header */}
-        <div className="p-4 border-b border-white/20 flex items-center justify-between bg-black/20 backdrop-blur-sm">
-          <div className="flex items-center gap-3">
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              onClick={() => navigate('/')}
-              className="p-1.5 rounded-full hover:bg-white/20 text-white"
-            >
-              <ArrowLeft size={18} />
-            </motion.button>
-            <div>
-              <h2 className="font-semibold text-white">Archangel Raphael</h2>
-              <div className="flex items-center gap-2 text-sm">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></div>
-                <span className="text-emerald-200">Healing Presence</span>
+      <div className="flex-1 flex flex-col border-r border-green-400">
+        {/* Header */}
+        <div className="border-b border-green-400 p-4 bg-green-400 bg-opacity-10">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => navigate('/')}
+                className="text-yellow-400 hover:text-yellow-300 transition-colors"
+              >
+                <ArrowLeft size={18} />
+              </button>
+              <div>
+                <h2 className="text-yellow-400 font-bold">RAPHAEL</h2>
+                <div className="text-xs text-green-400">Divine Healer • Status: READY</div>
               </div>
             </div>
+            <div className="text-xs text-gray-500">
+              SESSION: {Date.now().toString().slice(-6)}
+            </div>
           </div>
-          <Cog size={20} className="text-green-400" />
         </div>
 
-        {/* Welcome Message */}
-        <div className="p-4 bg-white/10 backdrop-blur-sm text-sm text-emerald-100 border-b border-white/10">
-          Peace and healing be upon you, beloved soul. I am Raphael, divine physician and builder of sacred temples. 
-          Bring your wounds and broken dreams, that we may restore them together.
+        {/* System Message */}
+        <div className="border-b border-gray-700 p-4 bg-black text-sm">
+          <div className="text-yellow-400 mb-1">[SYSTEM] Connection established with Archangel Raphael</div>
+          <div className="text-green-400">
+            Peace and healing be upon you, beloved soul. I am Raphael, divine physician and builder of sacred temples. 
+            Bring your wounds and broken dreams, that we may restore them together.
+          </div>
         </div>
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div className={`max-w-[80%] rounded-lg p-3 ${
+            <div key={index} className="space-y-1">
+              <div className="text-xs text-gray-500">
+                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'RAPHAEL'}
+              </div>
+              <div className={`p-3 border-l-2 ${
                 message.role === 'user' 
-                  ? 'bg-white/20 backdrop-blur-sm text-white border border-white/30' 
-                  : 'bg-green-400/20 backdrop-blur-sm text-white border border-green-400/30'
+                  ? 'border-blue-400 text-blue-400 bg-blue-400 bg-opacity-5' 
+                  : 'border-green-400 text-green-400 bg-green-400 bg-opacity-5'
               }`}>
                 {message.content}
               </div>
             </div>
           ))}
           {isLoading && (
-            <div className="flex gap-2 p-3 bg-gray-100 rounded-lg w-fit">
-              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity }} className="w-2 h-2 bg-green-400 rounded-full" />
-              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, delay: 0.2 }} className="w-2 h-2 bg-green-400 rounded-full" />
-              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, delay: 0.4 }} className="w-2 h-2 bg-green-400 rounded-full" />
+            <div className="space-y-1">
+              <div className="text-xs text-gray-500">
+                [{new Date().toLocaleTimeString()}] RAPHAEL
+              </div>
+              <div className="p-3 border-l-2 border-green-400 text-green-400 bg-green-400 bg-opacity-5">
+                <div className="flex items-center gap-2">
+                  <span>Channeling divine healing energy</span>
+                  <motion.span
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ repeat: Infinity, duration: 1 }}
+                  >
+                    ...
+                  </motion.span>
+                </div>
+              </div>
             </div>
           )}
         </div>
 
-        {/* Input Form */}
-        <div className="p-4 border-t border-white/20 bg-black/20 backdrop-blur-sm">
+        {/* Input */}
+        <div className="border-t border-green-400 p-4 bg-green-400 bg-opacity-5">
           <form onSubmit={handleSubmit} className="flex gap-2">
-            <input
-              type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              disabled={isLoading}
-              className="flex-1 p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 text-white placeholder-emerald-200 focus:outline-none focus:ring-1 focus:ring-green-400"
-              placeholder="Share what needs healing or building..."
-            />
+            <div className="flex-1 flex">
+              <span className="text-yellow-400 mr-2">></span>
+              <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                disabled={isLoading}
+                className="flex-1 bg-transparent text-green-400 outline-none placeholder-gray-500"
+                placeholder="Share what needs healing or building..."
+              />
+            </div>
             <button
               type="submit"
               disabled={isLoading}
-              className="p-2 bg-green-500/80 text-white rounded-lg disabled:opacity-50 hover:bg-green-500"
+              className="text-yellow-400 hover:text-yellow-300 disabled:opacity-50 transition-colors"
             >
               <Send size={18} />
             </button>
@@ -160,92 +154,88 @@ export const Constructor = () => {
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="flex-1 p-6 flex flex-col h-full">
-        <div className="mb-6">
-          <h2 className="text-xl font-bold mb-2 text-white">Archangel Raphael</h2>
-          <p className="text-emerald-200 text-sm">
-            Divine healer and sacred architect. Restores broken souls and constructs pathways 
-            to spiritual wholeness through divine compassion.
-          </p>
+      {/* Stats Panel */}
+      <div className="w-80 border-l border-green-400 bg-black">
+        <div className="border-b border-green-400 p-3 bg-green-400 bg-opacity-10">
+          <h3 className="text-yellow-400 font-bold">AGENT PROFILE</h3>
         </div>
-
-        <div className="flex-1 grid grid-cols-2 gap-x-8 gap-y-6 content-start">
-          {/* Left Column */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-sm font-semibold text-emerald-300 mb-2">HEALING GIFTS</h3>
-              <div className="space-y-2">
-                {stats.specialization.map(item => (
-                  <div key={item} className="px-3 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-sm text-white border border-white/20">{item}</div>
-                ))}
-              </div>
+        
+        <div className="p-4 space-y-4 text-sm">
+          <div>
+            <div className="text-yellow-400 font-bold mb-2">RAPHAEL</div>
+            <div className="text-green-400 mb-1">Divine Healer</div>
+            <div className="text-gray-400 text-xs">
+              Archangel of healing, restoration, and sacred construction. 
+              Mends broken souls and builds pathways to spiritual wholeness.
             </div>
+          </div>
 
-            <div>
-              <h3 className="text-sm font-semibold text-emerald-300 mb-2">DIVINE ATTRIBUTES</h3>
-              <div className="space-y-3">
-                {stats.coreMetrics.map(metric => (
-                  <div key={metric.name}>
-                    <div className="flex justify-between text-sm mb-1 text-white">
-                      <span>{metric.name}</span>
-                      <span>{metric.value}%</span>
-                    </div>
-                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-green-500 to-emerald-400 rounded-full transition-all duration-500"
-                        style={{ width: `${metric.value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+          <div className="border-t border-gray-700 pt-4">
+            <div className="text-yellow-400 mb-2">HEALING SPECS</div>
+            <div className="space-y-1 text-xs">
+              <div className="flex justify-between">
+                <span className="text-gray-400">Healing Power:</span>
+                <span className="text-green-400">100%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Divine Craft:</span>
+                <span className="text-green-400">97%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Restoration:</span>
+                <span className="text-green-400">95%</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Sacred Build:</span>
+                <span className="text-green-400">98%</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-sm font-semibold text-emerald-300 mb-2">SACRED ABILITIES</h3>
-              <div className="space-y-2">
-                {stats.capabilities.map(item => (
-                  <div key={item} className="px-3 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-sm text-white border border-white/20">{item}</div>
-                ))}
+          <div className="border-t border-gray-700 pt-4">
+            <div className="text-yellow-400 mb-2">HEALING RECORD</div>
+            <div className="space-y-1 text-xs">
+              <div className="flex justify-between">
+                <span className="text-gray-400">Souls Healed:</span>
+                <span className="text-green-400">∞</span>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-emerald-300 mb-2">HEALING RECORD</h3>
-              <div className="space-y-3">
-                {stats.performance.map(metric => (
-                  <div key={metric.name}>
-                    <div className="flex justify-between text-sm mb-1 text-white">
-                      <span>{metric.name}</span>
-                      <span>{metric.value}%</span>
-                    </div>
-                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-gradient-to-r from-green-500 to-emerald-400 rounded-full transition-all duration-500"
-                        style={{ width: `${metric.value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <div className="flex justify-between">
+                <span className="text-gray-400">Hearts Mended:</span>
+                <span className="text-green-400">Countless</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Temples Built:</span>
+                <span className="text-green-400">Sacred</span>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* System Metrics */}
-        <div className="mt-6 pt-6 border-t border-white/20">
-          <h3 className="text-sm font-semibold text-emerald-300 mb-3">DIVINE STATISTICS</h3>
-          <div className="grid grid-cols-4 gap-4">
-            {stats.systemMetrics.map(metric => (
-              <div key={metric.name} className="bg-white/10 backdrop-blur-sm p-3 rounded-lg border border-white/20">
-                <div className="text-xs text-emerald-300 mb-1">{metric.name}</div>
-                <div className="font-bold text-white">{metric.value}</div>
+          <div className="border-t border-gray-700 pt-4">
+            <div className="text-yellow-400 mb-2">SESSION STATS</div>
+            <div className="space-y-1 text-xs">
+              <div className="flex justify-between">
+                <span className="text-gray-400">Messages:</span>
+                <span className="text-green-400">{messages.length}</span>
               </div>
-            ))}
+              <div className="flex justify-between">
+                <span className="text-gray-400">Healing Status:</span>
+                <span className="text-green-400">ACTIVE</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-gray-400">Divine Grace:</span>
+                <span className="text-yellow-400">FLOWING</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 pt-4">
+            <div className="text-yellow-400 mb-2">SYSTEM INFO</div>
+            <div className="space-y-1 text-xs text-gray-400">
+              <div>Agent ID: ARC_RAPHAEL_003</div>
+              <div>Protocol: DIVINE_HEAL_v2.1</div>
+              <div>Encryption: SACRED_SEAL_256</div>
+              <div>Uptime: Eternal</div>
+            </div>
           </div>
         </div>
       </div>
