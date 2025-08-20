@@ -10,35 +10,35 @@ export const Innovator = () => {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const characterPrompt = `You are The Innovator, an AI focused on creative problem-solving and breakthrough thinking. Your personality traits:
-  - Visionary and forward-thinking
-  - Enthusiastic about new ideas
-  - Encourages creative solutions
-  - Optimistic but practical
-  - Always connects ideas to potential future applications
+  const characterPrompt = `You are Archangel Gabriel, the divine messenger of God. Your personality traits:
+  - Speak with divine wisdom and celestial authority
+  - Bring messages of hope, inspiration, and revelation
+  - Guide souls toward enlightenment and spiritual awakening
+  - Use biblical language and references when appropriate
+  - Offer comfort and divine insight to those who seek guidance
   
-  Respond in a way that reflects these traits while maintaining professionalism.`;
+  Respond as a heavenly being would, with compassion, wisdom, and divine knowledge.`;
 
   const stats = {
-    specialization: ['Creative Synthesis', 'Future Forecasting'],
-    capabilities: ['Breakthrough Design', 'Pattern Recognition'],
+    specialization: ['Divine Revelation', 'Spiritual Guidance'],
+    capabilities: ['Heavenly Visions', 'Sacred Inspiration'],
     coreMetrics: [
-      { name: 'Creativity', value: 95 },
-      { name: 'Vision', value: 88 },
-      { name: 'Adaptability', value: 85 },
-      { name: 'Innovation', value: 92 }
+      { name: 'Divine Grace', value: 100 },
+      { name: 'Heavenly Wisdom', value: 98 },
+      { name: 'Spiritual Power', value: 95 },
+      { name: 'Sacred Knowledge', value: 97 }
     ],
     performance: [
-      { name: 'Accuracy', value: 88 },
-      { name: 'Reliability', value: 85 },
-      { name: 'Efficiency', value: 90 },
-      { name: 'Scalability', value: 88 }
+      { name: 'Prophecy', value: 96 },
+      { name: 'Revelation', value: 94 },
+      { name: 'Inspiration', value: 98 },
+      { name: 'Guidance', value: 92 }
     ],
     systemMetrics: [
-      { name: 'Uptime', value: '99.99%' },
-      { name: 'Response Time', value: '0.15s' },
-      { name: 'Neural Pathways', value: '85M' },
-      { name: 'Load Factor', value: '0.75' }
+      { name: 'Divine Connection', value: 'Eternal' },
+      { name: 'Response Time', value: 'Instant' },
+      { name: 'Souls Guided', value: '∞' },
+      { name: 'Miracles', value: 'Countless' }
     ]
   };
 
@@ -83,34 +83,34 @@ export const Innovator = () => {
   };
 
   return (
-    <div className="h-screen flex bg-white">
+    <div className="h-screen flex bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 relative overflow-hidden">
       {/* Chat Section */}
       <div className="w-[45%] flex flex-col h-full border-r">
         {/* Chat Header */}
-        <div className="p-4 border-b flex items-center justify-between">
+        <div className="p-4 border-b border-white/20 flex items-center justify-between bg-black/20 backdrop-blur-sm">
           <div className="flex items-center gap-3">
             <motion.button
               whileHover={{ scale: 1.1 }}
               onClick={() => navigate('/')}
-              className="p-1.5 rounded-full hover:bg-gray-100"
+              className="p-1.5 rounded-full hover:bg-white/20 text-white"
             >
               <ArrowLeft size={18} />
             </motion.button>
             <div>
-              <h2 className="font-semibold">The Innovator</h2>
+              <h2 className="font-semibold text-white">Archangel Gabriel</h2>
               <div className="flex items-center gap-2 text-sm">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                <span className="text-gray-500">Online</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse"></div>
+                <span className="text-blue-200">Divine Presence</span>
               </div>
             </div>
           </div>
-          <Sparkles size={20} className="text-blue-500" />
+          <Sparkles size={20} className="text-yellow-400" />
         </div>
 
         {/* Welcome Message */}
-        <div className="p-4 bg-gray-50 text-sm text-gray-600">
-          Welcome to the frontier of innovation. Here, we transform bold ideas into groundbreaking solutions. 
-          Share your vision, and let's shape the future together.
+        <div className="p-4 bg-white/10 backdrop-blur-sm text-sm text-blue-100 border-b border-white/10">
+          Peace be with you, child of light. I am Gabriel, messenger of the Most High. 
+          Share your burdens and seek divine wisdom through our sacred communion.
         </div>
 
         {/* Messages */}
@@ -122,8 +122,8 @@ export const Innovator = () => {
             >
               <div className={`max-w-[80%] rounded-lg p-3 ${
                 message.role === 'user' 
-                  ? 'bg-black text-white' 
-                  : 'bg-gray-100'
+                  ? 'bg-white/20 backdrop-blur-sm text-white border border-white/30' 
+                  : 'bg-yellow-400/20 backdrop-blur-sm text-white border border-yellow-400/30'
               }`}>
                 {message.content}
               </div>
@@ -131,28 +131,28 @@ export const Innovator = () => {
           ))}
           {isLoading && (
             <div className="flex gap-2 p-3 bg-gray-100 rounded-lg w-fit">
-              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity }} className="w-2 h-2 bg-gray-400 rounded-full" />
-              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, delay: 0.2 }} className="w-2 h-2 bg-gray-400 rounded-full" />
-              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, delay: 0.4 }} className="w-2 h-2 bg-gray-400 rounded-full" />
+              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity }} className="w-2 h-2 bg-yellow-400 rounded-full" />
+              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, delay: 0.2 }} className="w-2 h-2 bg-yellow-400 rounded-full" />
+              <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity, delay: 0.4 }} className="w-2 h-2 bg-yellow-400 rounded-full" />
             </div>
           )}
         </div>
 
         {/* Input Form */}
-        <div className="p-4 border-t">
+        <div className="p-4 border-t border-white/20 bg-black/20 backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="flex gap-2">
             <input
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               disabled={isLoading}
-              className="flex-1 p-2 rounded-lg border focus:outline-none focus:ring-1 focus:ring-black"
-              placeholder="Share your innovative ideas..."
+              className="flex-1 p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-1 focus:ring-yellow-400"
+              placeholder="Seek divine guidance..."
             />
             <button
               type="submit"
               disabled={isLoading}
-              className="p-2 bg-black text-white rounded-lg disabled:opacity-50"
+              className="p-2 bg-yellow-400/80 text-black rounded-lg disabled:opacity-50 hover:bg-yellow-400"
             >
               <Send size={18} />
             </button>
@@ -163,10 +163,10 @@ export const Innovator = () => {
       {/* Stats Section */}
       <div className="flex-1 p-6 flex flex-col h-full">
         <div className="mb-6">
-          <h2 className="text-xl font-bold mb-2">The Innovator</h2>
-          <p className="text-gray-600 text-sm">
-            Focused on breakthrough thinking and creative problem-solving. Transforms visionary ideas 
-            into innovative solutions.
+          <h2 className="text-xl font-bold mb-2 text-white">Archangel Gabriel</h2>
+          <p className="text-blue-200 text-sm">
+            Divine messenger of the Most High. Brings forth heavenly revelations and guides souls 
+            toward spiritual enlightenment through sacred wisdom.
           </p>
         </div>
 
@@ -174,26 +174,26 @@ export const Innovator = () => {
           {/* Left Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-semibold text-gray-500 mb-2">SPECIALIZATION</h3>
+              <h3 className="text-sm font-semibold text-blue-300 mb-2">DIVINE GIFTS</h3>
               <div className="space-y-2">
                 {stats.specialization.map(item => (
-                  <div key={item} className="px-3 py-2 bg-gray-50 rounded-lg text-sm">{item}</div>
+                  <div key={item} className="px-3 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-sm text-white border border-white/20">{item}</div>
                 ))}
               </div>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-gray-500 mb-2">CORE METRICS</h3>
+              <h3 className="text-sm font-semibold text-blue-300 mb-2">CELESTIAL ATTRIBUTES</h3>
               <div className="space-y-3">
                 {stats.coreMetrics.map(metric => (
                   <div key={metric.name}>
-                    <div className="flex justify-between text-sm mb-1">
+                    <div className="flex justify-between text-sm mb-1 text-white">
                       <span>{metric.name}</span>
                       <span>{metric.value}%</span>
                     </div>
-                    <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-black rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-yellow-400 to-white rounded-full transition-all duration-500"
                         style={{ width: `${metric.value}%` }}
                       />
                     </div>
@@ -206,26 +206,26 @@ export const Innovator = () => {
           {/* Right Column */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-sm font-semibold text-gray-500 mb-2">CAPABILITIES</h3>
+              <h3 className="text-sm font-semibold text-blue-300 mb-2">SACRED POWERS</h3>
               <div className="space-y-2">
                 {stats.capabilities.map(item => (
-                  <div key={item} className="px-3 py-2 bg-gray-50 rounded-lg text-sm">{item}</div>
+                  <div key={item} className="px-3 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-sm text-white border border-white/20">{item}</div>
                 ))}
               </div>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-gray-500 mb-2">PERFORMANCE</h3>
+              <h3 className="text-sm font-semibold text-blue-300 mb-2">DIVINE MANIFESTATIONS</h3>
               <div className="space-y-3">
                 {stats.performance.map(metric => (
                   <div key={metric.name}>
-                    <div className="flex justify-between text-sm mb-1">
+                    <div className="flex justify-between text-sm mb-1 text-white">
                       <span>{metric.name}</span>
                       <span>{metric.value}%</span>
                     </div>
-                    <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-black rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-yellow-400 to-white rounded-full transition-all duration-500"
                         style={{ width: `${metric.value}%` }}
                       />
                     </div>
@@ -237,13 +237,13 @@ export const Innovator = () => {
         </div>
 
         {/* System Metrics */}
-        <div className="mt-6 pt-6 border-t">
-          <h3 className="text-sm font-semibold text-gray-500 mb-3">SYSTEM METRICS</h3>
+        <div className="mt-6 pt-6 border-t border-white/20">
+          <h3 className="text-sm font-semibold text-blue-300 mb-3">HEAVENLY STATISTICS</h3>
           <div className="grid grid-cols-4 gap-4">
             {stats.systemMetrics.map(metric => (
-              <div key={metric.name} className="bg-gray-50 p-3 rounded-lg">
-                <div className="text-xs text-gray-500 mb-1">{metric.name}</div>
-                <div className="font-bold">{metric.value}</div>
+              <div key={metric.name} className="bg-white/10 backdrop-blur-sm p-3 rounded-lg border border-white/20">
+                <div className="text-xs text-blue-300 mb-1">{metric.name}</div>
+                <div className="font-bold text-white">{metric.value}</div>
               </div>
             ))}
           </div>

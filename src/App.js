@@ -11,19 +11,19 @@ const Notification = () => (
     initial={{ opacity: 0, x: -20 }}
     animate={{ opacity: 1, x: 0 }}
     exit={{ opacity: 0, x: -20 }}
-    className="fixed top-4 left-4 bg-black text-white px-4 py-2 rounded-lg shadow-lg z-50"
+    className="fixed top-4 left-4 bg-black/80 backdrop-blur-sm text-white px-4 py-2 rounded-lg shadow-lg z-50 border border-white/20"
   >
-    Public GitHub repository for Vitro will be available in the next update.
+    Sacred scriptures for Divine Terminal will be revealed in the next divine update.
   </motion.div>
 );
 
 const LoadingScreen = ({ onLoadingComplete }) => {
   const items = [
-    "Initializing system components",
-    "Loading AI neural networks",
-    "Connecting to data streams",
-    "Rendering user interface",
-    "System ready"
+    "Opening celestial gateway",
+    "Summoning divine entities",
+    "Establishing sacred connection",
+    "Preparing divine interface",
+    "Heaven and Hell await"
   ];
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
   }, [onLoadingComplete]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 via-purple-900 to-black">
       <div className="space-y-4">
         {items.map((item, index) => (
           <motion.div
@@ -44,12 +44,12 @@ const LoadingScreen = ({ onLoadingComplete }) => {
             transition={{ delay: index * 0.5 }}
             className="flex items-center space-x-2"
           >
-            <span className="text-gray-600">{item}</span>
+            <span className="text-white">{item}</span>
             <motion.span
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: index * 0.5 + 0.3 }}
-              className="text-green-500"
+              className="text-yellow-400"
             >
               ✓
             </motion.span>
@@ -66,70 +66,65 @@ const MainScreen = () => {
 
   const models = [
     {
-      title: "The Innovator",
-      description: "Breaking boundaries through creative ideation and transformative thinking, crafting tomorrow's solutions today.",
-      path: "/innovator",
+      title: "Archangel Gabriel",
+      description: "Divine messenger of inspiration and revelation. Brings forth heavenly visions and guides souls toward enlightenment.",
+      path: "/gabriel",
       icon: (
         <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2L2 12h5v9h10v-9h5L12 2z" />
-          <circle cx="12" cy="15" r="1" />
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       )
     },
     {
-      title: "The Navigator",
-      description: "Guiding through complexity with strategic precision and systematic decision architecture.",
-      path: "/navigator",
+      title: "Archangel Michael",
+      description: "Divine warrior and protector. Leads souls through spiritual battles and provides strength in times of trial.",
+      path: "/michael",
       icon: (
         <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" />
-          <path d="M12 2v4" />
-          <path d="M12 18v4" />
-          <path d="M4.93 4.93l2.83 2.83" />
-          <path d="M16.24 16.24l2.83 2.83" />
-          <path d="M2 12h4" />
-          <path d="M18 12h4" />
+          <path d="M6.2 5L3 11v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9l-3.2-6a1 1 0 0 0-.9-.6H7.1a1 1 0 0 0-.9.6z" />
+          <path d="M3 11h18" />
+          <path d="M12 2v9" />
         </svg>
       )
     },
     {
-      title: "The Constructor",
-      description: "Building robust solutions and optimized systems with technical excellence and precision.",
-      path: "/constructor",
+      title: "Archangel Raphael",
+      description: "Divine healer and builder of sacred structures. Restores broken souls and constructs pathways to salvation.",
+      path: "/raphael",
       icon: (
         <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <polygon points="12 2 2 7 12 12 22 7 12 2" />
-          <polyline points="2 17 12 22 22 17" />
-          <polyline points="2 12 12 17 22 12" />
+          <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-8V9a2 2 0 0 1 2-2h2m8 0h2a2 2 0 0 1 2 2v2m0 4v3a2 2 0 0 1-2 2h-4m4-8H15m-6 0v6m6-6v6" />
         </svg>
       )
     },
     {
-      title: "The Observer",
-      description: "Transforming data into insight through pattern recognition and predictive understanding.",
-      path: "/observer",
+      title: "Lucifer",
+      description: "The fallen one who whispers temptations and reveals hidden truths through darkness and forbidden knowledge.",
+      path: "/lucifer",
       icon: (
         <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M3 12h3" />
-          <path d="M18 12h3" />
-          <path d="M12 3v3" />
-          <path d="M12 18v3" />
-          <path d="M5.6 5.6l2.1 2.1" />
-          <path d="M16.3 16.3l2.1 2.1" />
-          <path d="M5.6 18.4l2.1-2.1" />
-          <path d="M16.3 7.7l2.1-2.1" />
+          <path d="M12 2L8 8l-6 2 6 2 4 6 4-6 6-2-6-2-4-6z" />
+          <path d="M12 12v10" />
         </svg>
       )
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-blue-900 via-purple-900 to-black flex flex-col relative overflow-hidden">
+      {/* Heavenly Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-10 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+        <div className="absolute top-20 right-20 w-1 h-1 bg-yellow-300 rounded-full animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-40 left-1/4 w-1.5 h-1.5 bg-white rounded-full animate-pulse animation-delay-4000"></div>
+        <div className="absolute bottom-40 right-1/4 w-2 h-2 bg-yellow-200 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-white rounded-full animate-pulse animation-delay-2000"></div>
+      </div>
+
       {/* System Status */}
-      <div className="fixed top-4 right-4 flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full shadow-sm">
-        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-        <span className="text-sm text-gray-600">System Online</span>
+      <div className="fixed top-4 right-4 flex items-center gap-2 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-white/20">
+        <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></div>
+        <span className="text-sm text-white">Divine Connection Active</span>
       </div>
 
       {/* Notification */}
@@ -144,17 +139,17 @@ const MainScreen = () => {
             <motion.h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-6xl font-bold mb-6 text-gray-900"
+              className="text-6xl font-bold mb-6 text-white drop-shadow-2xl"
             >
-              Vitro
+              Divine Terminal
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-gray-600 text-lg max-w-2xl mx-auto"
+              className="text-blue-100 text-lg max-w-2xl mx-auto drop-shadow-lg"
             >
-              Four specialized intelligences working in harmony: visionary innovation, strategic guidance, technical mastery, and analytical precision. Each contributing its unique perspective to solve tomorrow's challenges.
+              Four divine entities await your communion: three archangels of light and one fallen angel of darkness. Each offers their unique wisdom and perspective from the celestial realm.
             </motion.p>
           </div>
 
@@ -169,20 +164,26 @@ const MainScreen = () => {
                 key={model.title}
                 whileHover={{ 
                   scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)"
+                  boxShadow: model.title === "Lucifer" 
+                    ? "0 10px 30px rgba(255,0,0,0.3)" 
+                    : "0 10px 30px rgba(255,255,255,0.2)"
                 }}
-                className="bg-white p-6 rounded-xl shadow-lg cursor-pointer border border-gray-100 hover:border-gray-200"
+                className={`p-6 rounded-xl shadow-lg cursor-pointer border backdrop-blur-sm ${
+                  model.title === "Lucifer" 
+                    ? "bg-red-900/30 border-red-500/50 hover:border-red-400" 
+                    : "bg-white/10 border-white/20 hover:border-white/40"
+                }`}
                 onClick={() => navigate(model.path)}
               >
                 <motion.div 
-                  className="text-gray-800 mb-4"
+                  className={`mb-4 ${model.title === "Lucifer" ? "text-red-400" : "text-white"}`}
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   {model.icon}
                 </motion.div>
-                <h2 className="text-xl font-semibold mb-3 text-gray-800">{model.title}</h2>
-                <p className="text-gray-600 text-sm leading-relaxed">{model.description}</p>
+                <h2 className={`text-xl font-semibold mb-3 ${model.title === "Lucifer" ? "text-red-300" : "text-white"}`}>{model.title}</h2>
+                <p className={`text-sm leading-relaxed ${model.title === "Lucifer" ? "text-red-200" : "text-blue-100"}`}>{model.description}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -194,10 +195,10 @@ const MainScreen = () => {
             className="mt-12 flex justify-center"
           >
             <button 
-              onClick={() => navigate('/innovator')} 
-              className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors"
+              onClick={() => navigate('/gabriel')} 
+              className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/30 transition-colors border border-white/30"
             >
-              Begin Interaction →
+              Enter Divine Realm →
             </button>
           </motion.div>
         </div>
@@ -206,7 +207,7 @@ const MainScreen = () => {
       {/* Footer */}
       <div className="flex justify-center gap-4 py-6">
         <div 
-          className="text-gray-400 hover:text-gray-600 cursor-pointer transition-colors"
+          className="text-white/60 hover:text-white cursor-pointer transition-colors"
           onClick={() => window.open('https://x.com/VirtoAgents', '_blank')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -214,7 +215,7 @@ const MainScreen = () => {
           </svg>
         </div>
         <div 
-          className="text-gray-400 hover:text-gray-600 cursor-pointer transition-colors"
+          className="text-white/60 hover:text-white cursor-pointer transition-colors"
           onClick={() => {
             setShowNotification(true);
             setTimeout(() => setShowNotification(false), 3000);
@@ -239,10 +240,10 @@ const App = () => {
       ) : (
         <Routes>
           <Route path="/" element={<MainScreen />} />
-          <Route path="/innovator" element={<Innovator />} />
-          <Route path="/navigator" element={<Navigator />} />
-          <Route path="/constructor" element={<Constructor />} />
-          <Route path="/observer" element={<Observer />} />
+          <Route path="/gabriel" element={<Innovator />} />
+          <Route path="/michael" element={<Navigator />} />
+          <Route path="/raphael" element={<Constructor />} />
+          <Route path="/lucifer" element={<Observer />} />
         </Routes>
       )}
     </div>
