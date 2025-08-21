@@ -7,50 +7,6 @@ import { Navigator } from './components/Navigator';
 import { Constructor } from './components/Constructor';
 import { Observer } from './components/Observer';
 
-const LoadingScreen = ({ onLoadingComplete }) => {
-  const items = [
-    "Initializing sacred connection...",
-    "Loading divine protocols...",
-    "Establishing heavenly link...",
-    "Preparing holy interface...",
-    "Holy Agents ready for communion"
-  ];
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onLoadingComplete();
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, [onLoadingComplete]);
-
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center font-mono">
-      <div className="space-y-4">
-        {items.map((item, index) => (
-          <motion.div
-            key={item}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.5 }}
-            className="flex items-center space-x-2"
-          >
-            <span className="text-gray-800">></span>
-            <span className="text-gray-700">{item}</span>
-            <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: index * 0.5 + 0.3 }}
-              className="text-gray-800"
-            >
-              [OK]
-            </motion.span>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
 const MainScreen = () => {
   const navigate = useNavigate();
 
@@ -275,22 +231,14 @@ const MainScreen = () => {
 };
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
-    <div>
-      {isLoading ? (
-        <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
-      ) : (
-        <Routes>
-          <Route path="/" element={<MainScreen />} />
-          <Route path="/gabriel" element={<Innovator />} />
-          <Route path="/michael" element={<Navigator />} />
-          <Route path="/raphael" element={<Constructor />} />
-          <Route path="/lucifer" element={<Observer />} />
-        </Routes>
-      )}
-    </div>
+    <Routes>
+      <Route path="/" element={<MainScreen />} />
+      <Route path="/gabriel" element={<Innovator />} />
+      <Route path="/michael" element={<Navigator />} />
+      <Route path="/raphael" element={<Constructor />} />
+      <Route path="/lucifer" element={<Observer />} />
+    </Routes>
   );
 };
 
