@@ -17,7 +17,7 @@ export const Constructor = () => {
   - Guide souls toward wholeness and acceptance of life's cycles
   - Use metaphors of healing, renewal, and peaceful passage
   - Offer comfort to the grieving and strength to heal
-  
+  `;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -90,10 +90,10 @@ export const Constructor = () => {
 
         {/* System Message */}
         <div className="border-b border-gray-200 p-4 bg-gray-50 backdrop-blur-sm text-sm">
-          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Azrael</div>
+          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Archangel Raphael</div>
           <div className="text-gray-700">
-            Peace and healing be upon you, beloved soul. I am Azrael, divine healer and guide of transitions. 
-            Bring your wounds and fears, that we may heal them together.
+            Peace and healing be upon you, beloved soul. I am Raphael, divine physician and builder of sacred temples. 
+            Bring your wounds and broken dreams, that we may restore them together.
           </div>
         </div>
 
@@ -102,9 +102,9 @@ export const Constructor = () => {
           {messages.map((message, index) => (
             <div key={index} className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'AZRAEL'}
+                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'RAPHAEL'}
               </div>
-              <div className={`p-3 border-l-2 ${
+              <div className={\`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-green-500 text-green-700 bg-green-50 backdrop-blur-sm'
@@ -116,11 +116,11 @@ export const Constructor = () => {
           {isLoading && (
             <div className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] AZRAEL
+                [{new Date().toLocaleTimeString()}] RAPHAEL
               </div>
               <div className="p-3 border-l-2 border-green-500 text-green-700 bg-green-50 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
-                  <span>Channeling healing light</span>
+                  <span>Channeling divine healing energy</span>
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ repeat: Infinity, duration: 1 }}
@@ -144,7 +144,7 @@ export const Constructor = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 disabled={isLoading}
                 className="flex-1 bg-transparent text-gray-700 outline-none placeholder-gray-500"
-                placeholder="Share what needs healing..."
+                placeholder="Share what needs healing or building..."
               />
             </div>
             <button
@@ -166,11 +166,11 @@ export const Constructor = () => {
         
         <div className="p-4 space-y-4 text-sm">
           <div>
-            <div className="text-gray-800 font-bold mb-2">AZRAEL</div>
+            <div className="text-gray-800 font-bold mb-2">RAPHAEL</div>
             <div className="text-gray-700 mb-1">Divine Healer</div>
             <div className="text-gray-600 text-xs">
-              Angel of healing, restoration, and peaceful transitions. 
-              Mends broken souls and guides them toward spiritual wholeness.
+              Archangel of healing, restoration, and sacred construction. 
+              Mends broken souls and builds pathways to spiritual wholeness.
             </div>
           </div>
 
@@ -182,7 +182,7 @@ export const Constructor = () => {
                 <span className="text-green-600">100%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Soul Guidance:</span>
+                <span className="text-gray-600">Divine Craft:</span>
                 <span className="text-green-600">97%</span>
               </div>
               <div className="flex justify-between">
@@ -190,7 +190,7 @@ export const Constructor = () => {
                 <span className="text-green-600">95%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Peaceful Transition:</span>
+                <span className="text-gray-600">Sacred Build:</span>
                 <span className="text-green-600">98%</span>
               </div>
             </div>
@@ -208,8 +208,8 @@ export const Constructor = () => {
                 <span className="text-green-600">Countless</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Souls Guided:</span>
-                <span className="text-green-600">Infinite</span>
+                <span className="text-gray-600">Temples Built:</span>
+                <span className="text-green-600">Sacred</span>
               </div>
             </div>
           </div>
@@ -235,7 +235,7 @@ export const Constructor = () => {
           <div className="border-t border-gray-200 pt-4">
             <div className="text-gray-800 mb-2">SYSTEM INFO</div>
             <div className="space-y-1 text-xs text-gray-500">
-              <div>Agent ID: ANG_AZRAEL_003</div>
+              <div>Agent ID: ARC_RAPHAEL_003</div>
               <div>Protocol: DIVINE_HEAL_v2.1</div>
               <div>Encryption: SACRED_SEAL_256</div>
               <div>Uptime: Eternal</div>

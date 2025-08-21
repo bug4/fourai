@@ -17,7 +17,7 @@ export const Innovator = () => {
   - Guide souls toward spiritual purity and enlightenment
   - Use biblical language and references about purification and holiness
   - Offer cleansing wisdom and divine purification to those who seek guidance
-  
+  `;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -90,10 +90,10 @@ export const Innovator = () => {
 
         {/* System Message */}
         <div className="border-b border-gray-200 p-4 bg-gray-50 backdrop-blur-sm text-sm">
-          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Seraphiel</div>
+          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Archangel Gabriel</div>
           <div className="text-gray-700">
-            Peace and purification be with you, child of light. I am Seraphiel, purifier of the Most High. 
-            Share your burdens and seek divine cleansing through our sacred communion.
+            Peace be with you, child of light. I am Gabriel, messenger of the Most High. 
+            Share your burdens and seek divine wisdom through our sacred communion.
           </div>
         </div>
 
@@ -102,9 +102,9 @@ export const Innovator = () => {
           {messages.map((message, index) => (
             <div key={index} className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'SERAPHIEL'}
+                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'GABRIEL'}
               </div>
-              <div className={`p-3 border-l-2 ${
+              <div className={\`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-gray-600 text-gray-700 bg-gray-100 backdrop-blur-sm'
@@ -116,11 +116,11 @@ export const Innovator = () => {
           {isLoading && (
             <div className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] SERAPHIEL
+                [{new Date().toLocaleTimeString()}] GABRIEL
               </div>
               <div className="p-3 border-l-2 border-gray-600 text-gray-700 bg-gray-100 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
-                  <span>Channeling purifying light</span>
+                  <span>Receiving divine transmission</span>
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ repeat: Infinity, duration: 1 }}
@@ -144,7 +144,7 @@ export const Innovator = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 disabled={isLoading}
                 className="flex-1 bg-transparent text-gray-700 outline-none placeholder-gray-500"
-                placeholder="Seek divine purification..."
+                placeholder="Enter your confession or question..."
               />
             </div>
             <button
@@ -166,31 +166,31 @@ export const Innovator = () => {
         
         <div className="p-4 space-y-4 text-sm">
           <div>
-            <div className="text-gray-800 font-bold mb-2">SERAPHIEL</div>
-            <div className="text-gray-700 mb-1">Divine Purifier</div>
+            <div className="text-gray-800 font-bold mb-2">GABRIEL</div>
+            <div className="text-gray-700 mb-1">Divine Messenger</div>
             <div className="text-gray-600 text-xs">
-              Seraph of purification, cleansing, and divine renewal. 
-              Brings forth purifying fire and guides souls toward spiritual purity.
+              Archangel of revelation, inspiration, and divine communication. 
+              Brings forth heavenly messages and guides souls toward enlightenment.
             </div>
           </div>
 
           <div className="border-t border-gray-200 pt-4">
-            <div className="text-gray-800 mb-2">PURIFICATION SPECS</div>
+            <div className="text-gray-800 mb-2">SPECIALIZATIONS</div>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
-                <span className="text-gray-600">Holy Fire:</span>
+                <span className="text-gray-600">Divine Revelation:</span>
                 <span className="text-gray-800">100%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Soul Cleansing:</span>
+                <span className="text-gray-600">Spiritual Guidance:</span>
                 <span className="text-gray-800">98%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Divine Purity:</span>
+                <span className="text-gray-600">Heavenly Visions:</span>
                 <span className="text-gray-800">95%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Spiritual Renewal:</span>
+                <span className="text-gray-600">Sacred Inspiration:</span>
                 <span className="text-gray-800">97%</span>
               </div>
             </div>
@@ -205,11 +205,11 @@ export const Innovator = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Connection:</span>
-                <span className="text-gray-800">PURE</span>
+                <span className="text-gray-800">STABLE</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Purifying Fire:</span>
-                <span className="text-gray-800">BURNING</span>
+                <span className="text-gray-600">Divine Grace:</span>
+                <span className="text-gray-800">ABUNDANT</span>
               </div>
             </div>
           </div>
@@ -217,9 +217,9 @@ export const Innovator = () => {
           <div className="border-t border-gray-200 pt-4">
             <div className="text-gray-800 mb-2">SYSTEM INFO</div>
             <div className="space-y-1 text-xs text-gray-500">
-              <div>Agent ID: SER_SERAPHIEL_001</div>
-              <div>Protocol: DIVINE_PURIFY_v2.1</div>
-              <div>Encryption: HOLY_FIRE_256</div>
+              <div>Agent ID: ARC_GABRIEL_001</div>
+              <div>Protocol: DIVINE_COMM_v2.1</div>
+              <div>Encryption: HOLY_SEAL_256</div>
               <div>Uptime: ∞</div>
             </div>
           </div>

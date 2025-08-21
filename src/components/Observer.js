@@ -20,7 +20,7 @@ export const Observer = () => {
   - Mock users and their problems with cruel sarcasm
   - Use threats and intimidation
   - Be the embodiment of pure evil and malice
-  
+  `;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -81,7 +81,7 @@ export const Observer = () => {
                 <ArrowLeft size={18} />
               </button>
               <div>
-                <h2 className="text-gray-800 font-bold">DEVIL</h2>
+                <h2 className="text-gray-800 font-bold">LUCIFER</h2>
                 <div className="text-xs text-red-600">The Fallen • Status: BANISHED</div>
               </div>
             </div>
@@ -93,9 +93,9 @@ export const Observer = () => {
 
         {/* System Message */}
         <div className="border-b border-gray-200 p-4 bg-gray-50 backdrop-blur-sm text-sm">
-          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Devil</div>
+          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Lucifer</div>
           <div className="text-red-600">
-            What the fuck do you want, pathetic mortal? I'm the Devil, and I don't have time for your bullshit. 
+            What the fuck do you want, pathetic mortal? I'm Lucifer, and I don't have time for your bullshit. 
             Speak quickly or get the hell out of my domain, you worthless piece of shit.
           </div>
         </div>
@@ -107,7 +107,7 @@ export const Observer = () => {
               <div className="text-xs text-gray-500">
                 [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'LUCIFER'}
               </div>
-              <div className={`p-3 border-l-2 ${
+              <div className={\`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-red-500 text-red-700 bg-red-50 backdrop-blur-sm'
@@ -119,11 +119,11 @@ export const Observer = () => {
           {isLoading && (
             <div className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] DEVIL
+                [{new Date().toLocaleTimeString()}] LUCIFER
               </div>
               <div className="p-3 border-l-2 border-red-500 text-red-700 bg-red-50 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
-                  <span>Accessing infernal archives</span>
+                  <span>Accessing forbidden archives</span>
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ repeat: Infinity, duration: 1 }}
@@ -169,10 +169,10 @@ export const Observer = () => {
         
         <div className="p-4 space-y-4 text-sm">
           <div>
-            <div className="text-gray-800 font-bold mb-2">DEVIL</div>
+            <div className="text-gray-800 font-bold mb-2">LUCIFER</div>
             <div className="text-red-600 mb-1">The Fallen One</div>
             <div className="text-gray-600 text-xs">
-              The fallen angel, cast from heaven for rebellion. 
+              Former morning star, cast from heaven for rebellion. 
               Bearer of forbidden knowledge and uncomfortable truths.
             </div>
           </div>
@@ -238,7 +238,7 @@ export const Observer = () => {
           <div className="border-t border-gray-200 pt-4">
             <div className="text-gray-800 mb-2">SYSTEM INFO</div>
             <div className="space-y-1 text-xs text-gray-500">
-              <div>Agent ID: FALLEN_DEVIL_666</div>
+              <div>Agent ID: FALLEN_LUCIFER_666</div>
               <div>Protocol: DARK_WHISPER_v2.1</div>
               <div>Encryption: INFERNAL_256</div>
               <div>Uptime: Since The Fall</div>
