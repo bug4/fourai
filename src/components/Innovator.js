@@ -104,7 +104,7 @@ export const Innovator = () => {
               <div className="text-xs text-gray-500">
                 [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'GABRIEL'}
               </div>
-              <div className={\`p-3 border-l-2 ${
+              <div className={`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-gray-600 text-gray-700 bg-gray-100 backdrop-blur-sm'
