@@ -104,7 +104,7 @@ export const Constructor = () => {
               <div className="text-xs text-gray-500">
                 [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'RAPHAEL'}
               </div>
-              <div className={\`p-3 border-l-2 ${
+              <div className={`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-green-500 text-green-700 bg-green-50 backdrop-blur-sm'
