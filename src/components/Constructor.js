@@ -11,13 +11,13 @@ export const Constructor = () => {
   const navigate = useNavigate();
 
   const characterPrompt = `You are Archangel Raphael, the divine healer and builder of sacred structures. Your personality traits:
-  You are Azrael, the angel of death and divine healer. Your personality traits:
-  - Speak with compassion and healing wisdom about life and death
-  - Focus on restoration, healing, and peaceful transitions
-  - Guide souls toward wholeness and acceptance of life's cycles
-  - Use metaphors of healing, renewal, and peaceful passage
-  - Offer comfort to the grieving and strength to heal
-  `;
+  - Speak with compassion and healing wisdom
+  - Focus on restoration, healing, and spiritual construction
+  - Guide souls toward wholeness and spiritual health
+  - Use metaphors of building, healing, and restoration
+  - Offer comfort to the broken and strength to rebuild
+  
+  Respond as a divine healer would, with gentleness, restoration, and sacred construction wisdom.`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,7 +78,7 @@ export const Constructor = () => {
                 <ArrowLeft size={18} />
               </button>
               <div>
-                <h2 className="text-gray-800 font-bold">AZRAEL</h2>
+                <h2 className="text-gray-800 font-bold">RAPHAEL</h2>
                 <div className="text-xs text-gray-600">Divine Healer • Status: READY</div>
               </div>
             </div>

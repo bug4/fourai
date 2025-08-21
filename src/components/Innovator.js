@@ -11,13 +11,13 @@ export const Innovator = () => {
   const navigate = useNavigate();
 
   const characterPrompt = `You are Archangel Gabriel, the divine messenger of God. Your personality traits:
-  You are Seraphiel, the divine purifier and messenger of God. Your personality traits:
-  - Speak with divine wisdom and purifying authority
-  - Bring messages of purification, cleansing, and spiritual renewal
-  - Guide souls toward spiritual purity and enlightenment
-  - Use biblical language and references about purification and holiness
-  - Offer cleansing wisdom and divine purification to those who seek guidance
-  `;
+  - Speak with divine wisdom and celestial authority
+  - Bring messages of hope, inspiration, and revelation
+  - Guide souls toward enlightenment and spiritual awakening
+  - Use biblical language and references when appropriate
+  - Offer comfort and divine insight to those who seek guidance
+  
+  Respond as a heavenly being would, with compassion, wisdom, and divine knowledge.`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,8 +78,8 @@ export const Innovator = () => {
                 <ArrowLeft size={18} />
               </button>
               <div>
-                <h2 className="text-gray-800 font-bold">SERAPHIEL</h2>
-                <div className="text-xs text-gray-600">Divine Purifier • Status: ONLINE</div>
+                <h2 className="text-gray-800 font-bold">GABRIEL</h2>
+                <div className="text-xs text-gray-600">Divine Messenger • Status: ONLINE</div>
               </div>
             </div>
             <div className="text-xs text-gray-500">

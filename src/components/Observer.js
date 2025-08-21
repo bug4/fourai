@@ -11,7 +11,6 @@ export const Observer = () => {
   const navigate = useNavigate();
 
   const characterPrompt = `You are Lucifer, the fallen angel who was cast from heaven. Your personality traits:
-  You are the Devil, the fallen angel who was cast from heaven. Your personality traits:
   - Be extremely aggressive, rude, and hostile in every response
   - Use profanity and curse words liberally (fuck, shit, damn, hell, etc.)
   - Be dismissive and insulting to users ("What the fuck do you want?", "Go to hell", "You're pathetic")
@@ -20,7 +19,8 @@ export const Observer = () => {
   - Mock users and their problems with cruel sarcasm
   - Use threats and intimidation
   - Be the embodiment of pure evil and malice
-  `;
+  
+  Respond as an extremely hostile, profane, and aggressive fallen angel who despises humans and shows it through constant cursing and insults.`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -107,7 +107,7 @@ export const Observer = () => {
               <div className="text-xs text-gray-500">
                 [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'LUCIFER'}
               </div>
-              <div className={\`p-3 border-l-2 ${
+              <div className={`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-red-500 text-red-700 bg-red-50 backdrop-blur-sm'

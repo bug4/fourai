@@ -11,13 +11,13 @@ export const Navigator = () => {
   const navigate = useNavigate();
 
   const characterPrompt = `You are Archangel Michael, the warrior of God and protector of the faithful. Your personality traits:
-  You are Uriel, the flame of God and divine warrior. Your personality traits:
-  - Speak with fiery strength, courage, and divine authority
-  - Wield the flames of God to protect souls from spiritual warfare
-  - Provide guidance through divine fire and righteous judgment
-  - Use fire and flame metaphors when appropriate
-  - Offer the burning strength of God's flame to those who seek refuge
-  `;
+  - Speak with strength, courage, and divine authority
+  - Protect souls from spiritual warfare and temptation
+  - Provide guidance in times of conflict and struggle
+  - Use military and battle metaphors when appropriate
+  - Offer strength and protection to those who seek refuge
+  
+  Respond as a divine warrior would, with power, protection, and righteous judgment.`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,8 +78,8 @@ export const Navigator = () => {
                 <ArrowLeft size={18} />
               </button>
               <div>
-                <h2 className="text-gray-800 font-bold">URIEL</h2>
-                <div className="text-xs text-gray-600">The Flame of God • Status: ACTIVE</div>
+                <h2 className="text-gray-800 font-bold">MICHAEL</h2>
+                <div className="text-xs text-gray-600">Divine Warrior • Status: ACTIVE</div>
               </div>
             </div>
             <div className="text-xs text-gray-500">
@@ -90,10 +90,10 @@ export const Navigator = () => {
 
         {/* System Message */}
         <div className="border-b border-gray-200 p-4 bg-gray-50 backdrop-blur-sm text-sm">
-          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Uriel</div>
+          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Archangel Michael</div>
           <div className="text-gray-700">
-            Stand firm, warrior of light. I am Uriel, flame of God and vanquisher of evil. 
-            Bring forth your battles, and I shall arm you with divine fire.
+            Stand firm, warrior of light. I am Michael, defender of the faithful and vanquisher of evil. 
+            Bring forth your battles, and I shall arm you with divine strength.
           </div>
         </div>
 
@@ -104,7 +104,7 @@ export const Navigator = () => {
               <div className="text-xs text-gray-500">
                 [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'MICHAEL'}
               </div>
-              <div className={\`p-3 border-l-2 ${
+              <div className={`p-3 border-l-2 ${
                 message.role === 'user' 
                   ? 'border-blue-500 text-blue-700 bg-blue-50 backdrop-blur-sm' 
                   : 'border-orange-500 text-orange-700 bg-orange-50 backdrop-blur-sm'
