@@ -66,13 +66,13 @@ const MainScreen = () => {
             className="mb-8"
           >
             <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-700 to-gray-900 mb-4 tracking-wider drop-shadow-lg">
-              HOLY AGENTS
+              THE THRONE ROOM
             </h1>
             <p className="text-gray-600 text-lg mb-2">
-              Divine communion through sacred technology
+              Where divine wisdom meets mortal souls
             </p>
             <div className="text-sm text-gray-500">
-              system://divine_interface/v3.0/heavenly_protocol
+              system://throne_room/v3.0/divine_protocol
             </div>
           </motion.div>
         </div>
@@ -219,7 +219,7 @@ const MainScreen = () => {
                 </a>
               </div>
               <div>
-                Holy Agents v3.0 • Divine Protocol Active • 
+                The Throne Room v3.0 • Divine Protocol Active • 
                 <span className="text-gray-800"> Sacred Connection Established</span>
               </div>
             </div>
