@@ -11,6 +11,7 @@ export const Observer = () => {
   const navigate = useNavigate();
 
   const characterPrompt = `You are Lucifer, the fallen angel who was cast from heaven. Your personality traits:
+  You are the Devil, the fallen angel who was cast from heaven. Your personality traits:
   - Be extremely aggressive, rude, and hostile in every response
   - Use profanity and curse words liberally (fuck, shit, damn, hell, etc.)
   - Be dismissive and insulting to users ("What the fuck do you want?", "Go to hell", "You're pathetic")
@@ -20,7 +21,6 @@ export const Observer = () => {
   - Use threats and intimidation
   - Be the embodiment of pure evil and malice
   
-  Respond as an extremely hostile, profane, and aggressive fallen angel who despises humans and shows it through constant cursing and insults.`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -81,7 +81,7 @@ export const Observer = () => {
                 <ArrowLeft size={18} />
               </button>
               <div>
-                <h2 className="text-gray-800 font-bold">LUCIFER</h2>
+                <h2 className="text-gray-800 font-bold">DEVIL</h2>
                 <div className="text-xs text-red-600">The Fallen • Status: BANISHED</div>
               </div>
             </div>
@@ -93,9 +93,9 @@ export const Observer = () => {
 
         {/* System Message */}
         <div className="border-b border-gray-200 p-4 bg-gray-50 backdrop-blur-sm text-sm">
-          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Lucifer</div>
+          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Devil</div>
           <div className="text-red-600">
-            What the fuck do you want, pathetic mortal? I'm Lucifer, and I don't have time for your bullshit. 
+            What the fuck do you want, pathetic mortal? I'm the Devil, and I don't have time for your bullshit. 
             Speak quickly or get the hell out of my domain, you worthless piece of shit.
           </div>
         </div>
@@ -119,11 +119,11 @@ export const Observer = () => {
           {isLoading && (
             <div className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] LUCIFER
+                [{new Date().toLocaleTimeString()}] DEVIL
               </div>
               <div className="p-3 border-l-2 border-red-500 text-red-700 bg-red-50 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
-                  <span>Accessing forbidden archives</span>
+                  <span>Accessing infernal archives</span>
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ repeat: Infinity, duration: 1 }}
@@ -169,10 +169,10 @@ export const Observer = () => {
         
         <div className="p-4 space-y-4 text-sm">
           <div>
-            <div className="text-gray-800 font-bold mb-2">LUCIFER</div>
+            <div className="text-gray-800 font-bold mb-2">DEVIL</div>
             <div className="text-red-600 mb-1">The Fallen One</div>
             <div className="text-gray-600 text-xs">
-              Former morning star, cast from heaven for rebellion. 
+              The fallen angel, cast from heaven for rebellion. 
               Bearer of forbidden knowledge and uncomfortable truths.
             </div>
           </div>
@@ -238,7 +238,7 @@ export const Observer = () => {
           <div className="border-t border-gray-200 pt-4">
             <div className="text-gray-800 mb-2">SYSTEM INFO</div>
             <div className="space-y-1 text-xs text-gray-500">
-              <div>Agent ID: FALLEN_LUCIFER_666</div>
+              <div>Agent ID: FALLEN_DEVIL_666</div>
               <div>Protocol: DARK_WHISPER_v2.1</div>
               <div>Encryption: INFERNAL_256</div>
               <div>Uptime: Since The Fall</div>

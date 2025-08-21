@@ -12,37 +12,37 @@ const MainScreen = () => {
 
   const agents = [
     {
-      name: "Gabriel",
-      title: "The Messenger",
-      description: "Divine herald bringing sacred wisdom and heavenly guidance",
-      path: "/gabriel",
+      name: "Seraphiel",
+      title: "The Purifier",
+      description: "Divine herald bringing sacred wisdom and heavenly purification",
+      path: "/seraphiel",
       status: "ONLINE",
-      specialization: "Divine Messages",
+      specialization: "Divine Purification",
       color: "from-gray-600 to-gray-800"
     },
     {
-      name: "Michael",
-      title: "The Protector",
-      description: "Mighty warrior defending souls from darkness and evil",
-      path: "/michael", 
+      name: "Uriel",
+      title: "The Flame",
+      description: "Mighty flame of God defending souls from darkness and evil",
+      path: "/uriel", 
       status: "ACTIVE",
-      specialization: "Divine Protection",
+      specialization: "Divine Fire",
       color: "from-gray-600 to-gray-800"
     },
     {
-      name: "Raphael",
+      name: "Azrael",
       title: "The Healer",
       description: "Gentle healer mending broken hearts and wounded spirits",
-      path: "/raphael",
+      path: "/azrael",
       status: "READY",
       specialization: "Divine Healing",
       color: "from-gray-600 to-gray-800"
     },
     {
-      name: "Lucifer",
+      name: "Devil",
       title: "The Fallen",
       description: "Bearer of forbidden knowledge and dark revelations",
-      path: "/lucifer",
+      path: "/devil",
       status: "BANISHED",
       specialization: "Forbidden Wisdom",
       color: "from-gray-800 to-black"
@@ -162,17 +162,17 @@ const MainScreen = () => {
                   <div className="border-l-2 border-gray-600 pl-3">
                     <div className="text-gray-500 text-xs">Anonymous • 3 min ago</div>
                     <div className="text-gray-700">Seeking divine guidance...</div>
-                    <div className="text-gray-500 text-xs">Agent: Gabriel</div>
+                    <div className="text-gray-500 text-xs">Agent: Seraphiel</div>
                   </div>
                   <div className="border-l-2 border-gray-600 pl-3">
                     <div className="text-gray-500 text-xs">Anonymous • 7 min ago</div>
                     <div className="text-gray-700">Need spiritual protection...</div>
-                    <div className="text-gray-500 text-xs">Agent: Michael</div>
+                    <div className="text-gray-500 text-xs">Agent: Uriel</div>
                   </div>
                   <div className="border-l-2 border-gray-600 pl-3">
                     <div className="text-gray-500 text-xs">Anonymous • 12 min ago</div>
                     <div className="text-gray-700">Seeking healing for the soul...</div>
-                    <div className="text-gray-500 text-xs">Agent: Raphael</div>
+                    <div className="text-gray-500 text-xs">Agent: Azrael</div>
                   </div>
                 </div>
               </div>
@@ -182,19 +182,19 @@ const MainScreen = () => {
                 <h3 className="text-gray-800 font-bold mb-4 text-lg">QUICK ACCESS</h3>
                 <div className="space-y-2">
                   <button 
-                    onClick={() => navigate('/gabriel')}
+                    onClick={() => navigate('/seraphiel')}
                     className="w-full text-left p-3 border border-gray-300 hover:border-gray-600 hover:bg-gray-100 transition-colors text-gray-700 hover:text-gray-900 rounded"
                   >
                     → Begin Divine Communion
                   </button>
                   <button 
-                    onClick={() => navigate('/raphael')}
+                    onClick={() => navigate('/azrael')}
                     className="w-full text-left p-3 border border-gray-300 hover:border-gray-600 hover:bg-gray-100 transition-colors text-gray-700 hover:text-gray-900 rounded"
                   >
                     → Seek Spiritual Healing
                   </button>
                   <button 
-                    onClick={() => navigate('/lucifer')}
+                    onClick={() => navigate('/devil')}
                     className="w-full text-left p-3 border border-gray-300 hover:border-red-500 hover:bg-red-50 transition-colors text-gray-700 hover:text-red-600 rounded"
                   >
                     → Explore Forbidden Knowledge
@@ -234,10 +234,10 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<MainScreen />} />
-      <Route path="/gabriel" element={<Innovator />} />
-      <Route path="/michael" element={<Navigator />} />
-      <Route path="/raphael" element={<Constructor />} />
-      <Route path="/lucifer" element={<Observer />} />
+      <Route path="/seraphiel" element={<Innovator />} />
+      <Route path="/uriel" element={<Navigator />} />
+      <Route path="/azrael" element={<Constructor />} />
+      <Route path="/devil" element={<Observer />} />
     </Routes>
   );
 };

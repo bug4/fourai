@@ -11,13 +11,13 @@ export const Navigator = () => {
   const navigate = useNavigate();
 
   const characterPrompt = `You are Archangel Michael, the warrior of God and protector of the faithful. Your personality traits:
-  - Speak with strength, courage, and divine authority
-  - Protect souls from spiritual warfare and temptation
-  - Provide guidance in times of conflict and struggle
-  - Use military and battle metaphors when appropriate
-  - Offer strength and protection to those who seek refuge
+  You are Uriel, the flame of God and divine warrior. Your personality traits:
+  - Speak with fiery strength, courage, and divine authority
+  - Wield the flames of God to protect souls from spiritual warfare
+  - Provide guidance through divine fire and righteous judgment
+  - Use fire and flame metaphors when appropriate
+  - Offer the burning strength of God's flame to those who seek refuge
   
-  Respond as a divine warrior would, with power, protection, and righteous judgment.`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -78,8 +78,8 @@ export const Navigator = () => {
                 <ArrowLeft size={18} />
               </button>
               <div>
-                <h2 className="text-gray-800 font-bold">MICHAEL</h2>
-                <div className="text-xs text-gray-600">Divine Warrior • Status: ACTIVE</div>
+                <h2 className="text-gray-800 font-bold">URIEL</h2>
+                <div className="text-xs text-gray-600">The Flame of God • Status: ACTIVE</div>
               </div>
             </div>
             <div className="text-xs text-gray-500">
@@ -90,10 +90,10 @@ export const Navigator = () => {
 
         {/* System Message */}
         <div className="border-b border-gray-200 p-4 bg-gray-50 backdrop-blur-sm text-sm">
-          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Archangel Michael</div>
+          <div className="text-gray-800 mb-1">[SYSTEM] Connection established with Uriel</div>
           <div className="text-gray-700">
-            Stand firm, warrior of light. I am Michael, defender of the faithful and vanquisher of evil. 
-            Bring forth your battles, and I shall arm you with divine strength.
+            Stand firm, warrior of light. I am Uriel, flame of God and vanquisher of evil. 
+            Bring forth your battles, and I shall arm you with divine fire.
           </div>
         </div>
 
@@ -102,7 +102,7 @@ export const Navigator = () => {
           {messages.map((message, index) => (
             <div key={index} className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'MICHAEL'}
+                [{new Date().toLocaleTimeString()}] {message.role === 'user' ? 'USER' : 'URIEL'}
               </div>
               <div className={`p-3 border-l-2 ${
                 message.role === 'user' 
@@ -116,11 +116,11 @@ export const Navigator = () => {
           {isLoading && (
             <div className="space-y-1">
               <div className="text-xs text-gray-500">
-                [{new Date().toLocaleTimeString()}] MICHAEL
+                [{new Date().toLocaleTimeString()}] URIEL
               </div>
               <div className="p-3 border-l-2 border-orange-500 text-orange-700 bg-orange-50 backdrop-blur-sm">
                 <div className="flex items-center gap-2">
-                  <span>Preparing divine battle strategy</span>
+                  <span>Igniting divine flames</span>
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{ repeat: Infinity, duration: 1 }}
@@ -144,7 +144,7 @@ export const Navigator = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 disabled={isLoading}
                 className="flex-1 bg-transparent text-gray-700 outline-none placeholder-gray-500"
-                placeholder="Describe your spiritual battle..."
+                placeholder="Seek the flame of God..."
               />
             </div>
             <button
@@ -166,49 +166,49 @@ export const Navigator = () => {
         
         <div className="p-4 space-y-4 text-sm">
           <div>
-            <div className="text-gray-800 font-bold mb-2">MICHAEL</div>
-            <div className="text-gray-700 mb-1">Divine Warrior</div>
+            <div className="text-gray-800 font-bold mb-2">URIEL</div>
+            <div className="text-gray-700 mb-1">The Flame of God</div>
             <div className="text-gray-600 text-xs">
-              Archangel of protection, strength, and spiritual warfare. 
-              Leads souls through battles against darkness and provides divine armor.
+              Archangel of divine fire, judgment, and spiritual warfare. 
+              Leads souls through battles with God's flame and provides divine fire.
             </div>
           </div>
 
           <div className="border-t border-gray-200 pt-4">
-            <div className="text-gray-800 mb-2">COMBAT SPECS</div>
+            <div className="text-gray-800 mb-2">FLAME SPECS</div>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
-                <span className="text-gray-600">Divine Strength:</span>
+                <span className="text-gray-600">Divine Fire:</span>
                 <span className="text-orange-600">100%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Holy Justice:</span>
+                <span className="text-gray-600">Burning Justice:</span>
                 <span className="text-orange-600">98%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Protective Power:</span>
+                <span className="text-gray-600">Flame Shield:</span>
                 <span className="text-orange-600">96%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Warrior Spirit:</span>
+                <span className="text-gray-600">Fiery Spirit:</span>
                 <span className="text-orange-600">99%</span>
               </div>
             </div>
           </div>
 
           <div className="border-t border-gray-200 pt-4">
-            <div className="text-gray-800 mb-2">BATTLE RECORD</div>
+            <div className="text-gray-800 mb-2">FLAME RECORD</div>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
-                <span className="text-gray-600">Victories:</span>
+                <span className="text-gray-600">Flames Lit:</span>
                 <span className="text-orange-600">∞</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Souls Protected:</span>
+                <span className="text-gray-600">Souls Ignited:</span>
                 <span className="text-orange-600">Legion</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Evil Vanquished:</span>
+                <span className="text-gray-600">Evil Burned:</span>
                 <span className="text-orange-600">Countless</span>
               </div>
             </div>
@@ -222,12 +222,12 @@ export const Navigator = () => {
                 <span className="text-gray-800">{messages.length}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Battle Status:</span>
-                <span className="text-orange-600">READY</span>
+                <span className="text-gray-600">Flame Status:</span>
+                <span className="text-orange-600">BURNING</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-600">Divine Armor:</span>
-                <span className="text-gray-800">EQUIPPED</span>
+                <span className="text-gray-600">Divine Fire:</span>
+                <span className="text-gray-800">IGNITED</span>
               </div>
             </div>
           </div>
@@ -235,9 +235,9 @@ export const Navigator = () => {
           <div className="border-t border-gray-200 pt-4">
             <div className="text-gray-800 mb-2">SYSTEM INFO</div>
             <div className="space-y-1 text-xs text-gray-500">
-              <div>Agent ID: ARC_MICHAEL_002</div>
-              <div>Protocol: DIVINE_WAR_v2.1</div>
-              <div>Encryption: HOLY_SHIELD_256</div>
+              <div>Agent ID: ARC_URIEL_002</div>
+              <div>Protocol: DIVINE_FLAME_v2.1</div>
+              <div>Encryption: HOLY_FIRE_256</div>
               <div>Uptime: Eternal</div>
             </div>
           </div>
